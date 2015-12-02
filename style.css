@@ -62,12 +62,14 @@
     top: 50%;
     background-color: #333;
 }
+/*确定了居中块的长和宽，然后通过margin左和上的负值，调整到中间*/
 #center-4 .wrap .margin {
 	width: 160px;
 	height: 100px;
 	margin-left: -80px;
 	margin-top: -50px;
 }
+/*通过CSS3的transform translate3d方法将div向左和上移动50%*/
 #center-4 .wrap .translate {
 	-webkit-transform: translate3d(-50%, -50%, 0);
 	transfrom: translate3d(-50%, -50%, 0);
@@ -76,12 +78,15 @@
 	position: relative;
 	left: -50%;
 	top: -50%;
+	/*填充父元素*/
 	width: 100%;
 	height: 100%;
 	background: #333;
 }
 #center-4 .wrap .relative {
 	width: 150px;
+	/*高度要确定，top的值为百分比，是以父元素的高度为依据
+	但实际需要以自身高度为依据，所以需要自身占据的空间大小与父元素一致*/
 	height: 100px;
 	background-color: transparent;
 }
