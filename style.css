@@ -10,4 +10,40 @@
 	heigth: 300px;
 	line-height: 300px;
 	text-align: center;
+	background: #ccc;
+}
+
+#center-2 .wrap {
+	heigth: 400px;
+	width: 400px;
+	margin: 20px auto 0;
+	background: #ccc;
+}
+#center-2 .wrap .inner {
+	height: 100px;
+	width: 100px;
+	/*这里采用了css3的计算方法*/
+	padding: calc((100% - 100px)/2);
+	background: #777;
+	/*这里似乎用了background-clip属性，和box-sizing一样有3种值
+	content-box/padding-box/border-box
+	主要是为了显示效果，也可以不加*/
+	background-clip:content-box; 
+}
+
+#center-3 .wrap {
+	width: 100%;
+	height: 400px;
+	/*如果不加overflow，外边距会扩展到外面，因此没有垂直居中
+	加上好像是创建了一个BFC*/
+	overflow: hidden;
+	background: #ccc;
+}
+#center-3 .wrap .inner {
+	width: 100px;
+	height: 100px;
+	/*150px是人工计算的，可以使用sass等预处理工具操作，或者CSS特性
+	但跟不上还是需要知道元素的高度*/
+	margin: 150px auto 0;
+	background: #777;
 }
